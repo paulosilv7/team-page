@@ -1,0 +1,253 @@
+
+@-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+  }
+
+
+
+
+  @keyframes go-back {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+
+
+
+
+
+
+
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+    color: rgb(220, 220, 220);
+}
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    background-color: rgb(16, 19, 60);
+}
+
+
+/* --------------    HEADER    ----------------_ */
+
+
+
+
+
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+
+}
+
+    .container header {
+        width: 100%;
+        max-width: 900px;
+        height: 100%;
+        max-height: 250px;
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        
+
+        flex-wrap: wrap;
+        padding: 30px 20px 30px 20px;
+    }
+
+    
+        #title {
+            font-size: 18px;
+            width: 320px;
+            height: 80px;
+
+            -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+                animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        }
+            #title h1 {
+                color: grey;
+            }
+
+            #title h1:hover{
+                color: white;
+                transition: 1s;
+            }
+
+        #whoText {
+            font-size: 14px;
+            width: 320px;
+            height: 100px;
+
+            animation: go-back 1s;                
+        }
+
+
+            #whoText h4 {
+                margin-bottom: 10px;
+                color: grey;
+            }
+
+            #whoText p {
+                font-size: 100;
+            }
+
+
+
+
+
+
+
+
+
+/* --------------    MAIN    ----------------_ */
+
+main {
+    padding: 0px 20px 0px 20px;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0px 18px;
+
+    justify-content: space-between;
+
+}
+
+
+
+.peoplePicture {
+    width: 13.75rem;
+    max-width: 260px;
+    height: 340px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-areas: 
+    "img p"
+    "img p"
+    "h4 h4";
+
+    grid-template-columns: 70% 20%;
+    justify-content: space-between;
+
+    margin: 20px auto 39px auto;
+    filter: grayscale(100%);
+    animation: fadein 2s;
+
+}
+
+    .peoplePicture:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+        filter: none;
+    }
+
+
+
+    .peoplePicture img {
+        object-fit:contain;
+        width: 20rem;
+        max-width: 200px;
+        max-height: 300px;
+    }
+
+    .peoplePicture h4 {
+        height: 25px;
+        font-size: 15px;
+        margin-top: 7px;
+        font-family: 'poppins';
+    }
+
+
+    .peoplePicture p {
+        font-family:'poppins';
+        font-size: 11px;
+
+        width: 62px;
+        height: 15px;
+
+        rotate: 90deg;
+
+        position: relative;
+        top: 23px; 
+
+        margin-left: 4px;
+    }
+
+
+
+
+
